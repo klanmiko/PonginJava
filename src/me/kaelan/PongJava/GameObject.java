@@ -73,6 +73,7 @@ public void render(GameObject object, Color colour, Graphics g)
 {
 	g.setColor(colour);
 	g.drawRect(object.x, object.y, object.width, object.height);
+	g.fillRect(object.x, object.y, object.width, object.height);
 }
 
 }
