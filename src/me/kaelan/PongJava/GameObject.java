@@ -49,26 +49,12 @@ public void setX(int nx)
 public void scale (int windowwidth, int windowheight, GameObject me)
 {
 	float scalenum;
-	if (windowwidth>windowheight)
-	{
 		scalenum = windowwidth/windowheight;
-		me.width = (int) (me.width * scalenum);
-		me.height = (int) (me.height * scalenum);
-	}
-	else if (windowwidth==windowheight)
-	{
-		scalenum = windowheight/windowwidth;
-		me.width = (int) (me.width * scalenum);
-		me.height = (int) (me.height * scalenum);
-	}
-	else
-	{
-		scalenum = windowheight/windowwidth;
-		me.width = (int) (me.width * scalenum);
-		me.height = (int) (me.height * scalenum);
+		me.setWidth((int) (me.width * scalenum));
+		me.setHeight ((int) (me.height * scalenum));
 	}
 	
-}
+	
 public void render(GameObject object, Color colour, Graphics g)
 {
 	g.setColor(colour);
